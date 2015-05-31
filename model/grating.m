@@ -1,4 +1,4 @@
-Nx = 512 ; Ny = round(Nx*Lambda(2)/Lambda(1));
+Nx = 256 ; Ny = round(Nx*Lambda(2)/Lambda(1));
 miu_1 = ones(Nx,Ny);
 epr_1 = ones(Nx,Ny);
 for n=1:Nx/2
