@@ -14,9 +14,6 @@ pTE = 0;  % TE component
 pTM = 1;  % TM component
 model = 'grating'; % the .m file name in model folder
 sweep = 1;  % 0-no sweeping parameters ; 1 - sweep lambda ; 2 - theta
-        lambdaMin = 1.1 ;
-        lambdaMax = 3.1;
-        step = 0.01;
 switch sweep 
     case 1
         lambdaMin = 1.1 ;
