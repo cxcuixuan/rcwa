@@ -21,11 +21,17 @@ switch sweep
             r0(temp) = R ;
             t0(temp) = T ;
         end
-        plot(1./(lambdaMin+step.*([0:round((lambdaMax-lambdaMin)/step)]-1)),r0);
+        plot(lambdaMin+step.*([0:round((lambdaMax-lambdaMin)/step)]),r0);
     case 2
-        wavevector;
-        cal_rsmatrix;
-        cal_layersmatrix;
-        cal_tsmatrix;
-        eT_eR;
+        for temp = 1:1+round((thetaMax-thetaMin)/step)
+            theta = thetaMin + step * (temp-1);
+            wavevector;
+            cal_rsmatrix;
+            cal_layersmatrix;
+            cal_tsmatrix;
+            eT_eR;
+            r0(temp) = R ;
+            t0(temp) = T ;
+        end
+        plot(thetaMin+step.*([0:round((thetaMax-thetaMin)/step)]),r0);
 end
