@@ -3,7 +3,7 @@ clear all;
 addpath('model');
 addpath('lib');
 addpath('src');
-orderNum = [11,11]; % odd number;
+orderNum = [21,21]; % odd number;
 n0 = sqrt(2); % incident index
 nT = 3 ; % transmission index
 lambda = 2 ; % incident wavelength
