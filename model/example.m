@@ -12,4 +12,4 @@ for n=1:Ny
     end
 end
 thickness = [0.5 0.3] ;
-epr_1 = -28-1i; miu_1 = 1;
+epr_2 = 6; miu_2 = 1;

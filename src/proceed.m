@@ -34,4 +34,20 @@ switch sweep
             t0(temp) = T ;
         end
         plot(thetaMin+step.*([0:round((thetaMax-thetaMin)/step)]),r0);
+    case 3
+        r0 = zeros(1+round((thetaMax-thetaMin)/stepTheta),1+round((lambdaMax-lambdaMin)/stepLambda));
+        t0 = zeros(1+round((thetaMax-thetaMin)/stepTheta),1+round((lambdaMax-lambdaMin)/stepLambda));
+        for temptheta = 1:1+round((thetaMax-thetaMin)/stepTheta)
+            theta = thetaMin + stepTheta * (temptheta-1);
+            for templambda = 1:1+round((lambdaMax-lambdaMin)/stepLambda)
+                lambda = lambdaMin + stepLambda * (templambda-1);
+                wavevector;
+                cal_rsmatrix;
+                cal_layersmatrix;
+                cal_tsmatrix;
+                eT_eR;
+                r0(temptheta,templambda) = R ;
+                t0(temptheta,templambda) = T ;
+            end
+        end
 end

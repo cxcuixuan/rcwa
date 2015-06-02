@@ -3,11 +3,13 @@ k=k/sqrt((k'*k));
 if theta == 0
     aTE = [0;1;0];
 else
-   aTE = cross(k,[0;0;-1]);
+   aTE = cross(k,[0;0;1]);
    aTE = aTE/sqrt(aTE'*aTE);
 end
 aTM = cross(aTE,k);
 aTM = aTM/sqrt(aTM'*aTM);
+pTE = pte/sqrt((abs(pte).^2+abs(ptm).^2));
+pTM = ptm/sqrt((abs(pte).^2+abs(ptm).^2));
 pInc = pTE*aTE + pTM*aTM;
 
 eSrc = [pInc(1)*delta;pInc(2)*delta];
